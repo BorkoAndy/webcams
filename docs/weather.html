@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's weather</title>
+	<link rel="stylesheet" href="../files/css/weather-icons.min.css">
+    <!-- Style for weather forecast -->
+	<style>
+        table{
+            width: 100%;
+            background-color: #795F0C;
+        }
+        .small_res{
+            display: none;
+        }
+        .wt-header {
+			width: 100%;
+            background-color: #7f9aa1;
+            border: 3px white solid;
+            color: #f2f2f2;            
+            /* padding-right: 25px;
+            padding-left: 25px; */
+            text-align: left;
+            text-transform: uppercase;
+			flex-wrap: nowrap;
+            
+        }
+        body {
+            background-color: #f2f2f2;
+        }
+        tr:not(.wt-header){
+            background-color: #f2f2f2; 
+            color: #795F0C;
+			flex-wrap: wrap;
+        }
+        
+        .d-flex {
+            display: flex;
+            flex-direction: column;
+        }
+        .d-flex>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 10px 0px 10px;
+        }
+        .description {
+            padding-left: 25px;
+            color:#795F0C;
+            font: 27px Source Serif Pro;;
+        }
+        .s-description{
+            width: 100%;
+        }
+		.weather_detail,
+		.wt-header{
+			display: flex;
+			justify-content: space-around;
+			
+		}
+		.row{
+			margin-bottom: 30px;
+		}
+        @media (max-width: 767px){
+            .description {
+                display: none;
+            }
+            .small_res{
+                display: block;
+            }
+            .d-flex>div{
+                display: flex;
+                flex-direction: column;
+            }
+            table {
+                background-color: #f2f2f2;
+                width: 95%
+            };
+            
+        }
+    </style>
+</head>
+<body>
+        Bellevue Coords
+	<div style="float:right;  display: flex; gap: 20px;">
+		<!-- These two div are for now-weather -->		 
+		<div id='weather-font-icon'></div><div id='now_temperature'></div>
+		<!-- now-weather -->
+	</div>
+<script>   
+
+    const lat = 47.650978465054656;
+    const lon = 12.321479199751838;
+    
+    const code_font = {
+	"0":{
+		"day":{
+			"description":"Sonnig",
+			"class":"wi-day-sunny"
+		},
+		"night":{
+			"description":"Klar",
+			"class":"wi-night-clear"
+		}
+	},
+	"1":{
+		"day":{
+			"description":"Hauptsächlich sonnig",
+			"class":"wi-day-sunny-overcast"
+		},
+		"night":{
+			"description":"Hauptsächlich klar",
+			"class":"wi-night-alt-partly-cloudy"
+		}
+	},
+	"2":{
+		"day":{
+			"description":"Teilweise bewölkt",
+			"class":"wi-day-cloudy"
+		},
+		"night":{
+			"description":"Teilweise bewölkt",
+			"class":"wi-night-alt-cloudy"
+		}
+	},
+	"3":{
+		"day":{
+			"description":"Wolkig",
+			"class":"wi-cloudy"
+		},
+		"night":{
+			"description":"Wolkig",
+			"class":"wi-cloudy"
+		}
+	},
+	"45":{
+		"day":{
+			"description":"Nebelig",
+			"class":"wi-day-fog"
+		},
+		"night":{
+			"description":"Nebelig",
+			"class":"wi-night-fog"
+		}
+	},
+	"48":{
+		"day":{
+			"description":"Raureifnebel",
+			"class":"wi-fog"
+		},
+		"night":{
+			"description":"Raureifnebel",
+			"class":"wi-fog"
+		}
+	},
+	"51":{
+		"day":{
+			"description":"Leichter Nieselregen",
+			"class":"wi-sleet"
+		},
+		"night":{
+			"description":"Leichter Nieselregen",
+			"class":"wi-sleet"
+		}
+	},
+	"53":{
+		"day":{
+			"description":"Nieselregen",
+			"class":"wi-rain"
+		},
+		"night":{
+			"description":"Nieselregen",
+			"class":"wi-rain"
+		}
+	},
+	"55":{
+		"day":{
+			"description":"Starker Nieselregen",
+			"class":"wi-rain-wind"
+		},
+		"night":{
+			"description":"Starker Nieselregen",
+			"class":"wi-rain-wind"
+		}
+	},
+	"56":{
+		"day":{
+			"description":"Leichter eiskalter Nieselregen",
+			"class":"wi-rain-mix"
+		},
+		"night":{
+			"description":"Leichter eiskalter Nieselregen",
+			"class":"wi-rain-mix"
+		}
+	},
+	"57":{
+		"day":{
+			"description":"Eisiger Nieselregen",
+			"class":"wi-rain-mix"
+		},
+		"night":{
+			"description":"Eisiger Nieselregen",
+			"class":"wi-rain-mix"
+		}
+	},
+	"61":{
+		"day":{
+			"description":"Leichter Regen",
+			"class":"wi-day-rain"
+		},
+		"night":{
+			"description":"Leichter Regen",
+			"class":"wi-night-alt-rain"
+		}
+	},
+	"63":{
+		"day":{
+			"description":"Regen",
+			"class":"wi-day-rain"
+		},
+		"night":{
+			"description":"Regen",
+			"class":"wi-night-alt-rain-wind"
+		}
+	},
+	"65":{
+		"day":{
+			"description":"Starker Regen",
+			"class":"wi-day-rain"
+		},
+		"night":{
+			"description":"Starker Regen",
+			"class":"wi-night-alt-rain-wind"
+		}
+	},
+	"66":{
+		"day":{
+			"description":"Leichter Eisregen",
+			"class":"http://openweathermap.org/img/wn/10d@2x.png"
+		},
+		"night":{
+			"description":"Leichter Eisregen",
+			"class":"http://openweathermap.org/img/wn/10n@2x.png"
+		}
+	},
+	"67":{
+		"day":{
+			"description":"Eisiger Regen",
+			"class":"http://openweathermap.org/img/wn/10d@2x.png"
+		},
+		"night":{
+			"description":"Eisiger Regen",
+			"class":"http://openweathermap.org/img/wn/10n@2x.png"
+		}
+	},
+	"71":{
+		"day":{
+			"description":"Leichter Schnee",
+			"class":"wi-day-snow"
+		},
+		"night":{
+			"description":"Leichter Schnee",
+			"class":"wi-night-snow"
+		}
+	},
+	"73":{
+		"day":{
+			"description":"Schnee",
+			"class":"wi-day-snow"
+		},
+		"night":{
+			"description":"Schnee",
+			"class":"wi-night-snow"
+		}
+	},
+	"75":{
+		"day":{
+			"description":"Starker Schneefall",
+			"class":"wi-day-snow"
+		},
+		"night":{
+			"description":"Starker Schneefall",
+			"class":"wi-night-snow"
+		}
+	},
+	"77":{
+		"day":{
+			"description":"Schneekörner",
+			"class":"wi-day-snow"
+		},
+		"night":{
+			"description":"Schneekörner",
+			"class":"wi-night-snow"
+		}
+	},
+	"80":{
+		"day":{
+			"description":"Leichte Schauer",
+			"class":"wi-day-snow"
+		},
+		"night":{
+			"description":"Leichte Schauer",
+			"class":"wi-night-snow"
+		}
+	},
+	"81":{
+		"day":{
+			"description":"Schauer",
+			"class":"wi-showers"
+		},
+		"night":{
+			"description":"Schauer",
+			"class":"wi-showers"
+		}
+	},
+	"82":{
+		"day":{
+			"description":"Starke Schauer",
+			"class":"wi-showers"
+		},
+		"night":{
+			"description":"Starke Schauer",
+			"class":"wi-showers"
+		}
+	},
+	"85":{
+		"day":{
+			"description":"Leichte Schneeschauer",
+			"class":"wi-snow"
+		},
+		"night":{
+			"description":"Leichte Schneeschauer",
+			"class":"wi-snow"
+		}
+	},
+	"86":{
+		"day":{
+			"description":"Schneeschauer",
+			"class":"wi-snow"
+		},
+		"night":{
+			"description":"Schneeschauer",
+			"class":"wi-snow"
+		}
+	},
+	"95":{
+		"day":{
+			"description":"Gewitter",
+			"class":"wi-day-thunderstorm"
+		},
+		"night":{
+			"description":"Gewitter",
+			"class":"wi-thunderstorm"
+		}
+	},
+	"96":{
+		"day":{
+			"description":"Leichte Gewitter mit Hagel",
+			"class":"wi-day-thunderstorm"
+		},
+		"night":{
+			"description":"Leichte Gewitter mit Hagel",
+			"class":"wi-thunderstorm"
+		}
+	},
+	"99":{
+		"day":{
+			"description":"Gewitter mit Hagel",
+			"class":"wi-day-thunderstorm"
+		},
+		"night":{
+			"description":"Gewitter mit Hagel",
+			"class":"wi-thunderstorm"
+		}
+	}
+}
+document.addEventListener('DOMContentLoaded', get_weather_data);
+
+function get_weather_data() {
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
+    .then(result => result.json())
+    .then(data =>{
+        weather_data = data;
+        console.log(data.current.is_day);
+        set_now(data.current);
+    })
+}
+function set_now(current){ 
+	is_day = (current.is_day == 1) ? "day" : "night";	
+	let elem = document.getElementById("weather-font-icon");
+	
+	elem.innerHTML = '<i class="wi '+code_font[current.weather_code][is_day].class+'"></i>'
+    document.getElementById("now_temperature").innerHTML = Math.round(current.temperature_2m) + " °C";
+}
+
+</script>
+		<!-- EndOf now-weather -->
+
+		<!-- Weather forecast in two options - with table or with divs -->
+<div id="weather-table">
+    <!-- <table>
+        <tr class="wt-header">
+            <td class="description" style="width: 40%; padding-left: 25px;">Tag</td>
+            <td style="text-align: center;">VORMITTAG</td>
+            <td style="text-align: center;">NACHMITTAG</td>
+            <td style="text-align: center;">ABEND</td>
+        </tr>
+		<tr id="wt-s-today" class="small_res"><td class="s-description">Heute - </td>
+		</tr>
+        <tr id="wt-today">
+            <td class="description">Heute - </td>
+            <td class="morning">Hi<div></div></td>
+            <td class="noon"><img src=""><p></p></td>
+            <td class="afternoon"><img src=""><p></p></td>
+        </tr>
+		<tr id="wt-s-today+1" class="small_res"><td class="s-description">Morgen - </td></tr>
+        <tr id="wt-today+1">
+            <td class="description">Morgen - </td>
+            <td class="morning"><img src=""><p></p></td>
+            <td class="noon"><img src=""><p></p></td>
+            <td class="afternoon"><img src=""><p></p></td>
+        </tr>
+		<tr id="wt-s-today+2" class="small_res"><td class="s-description"></td></tr>
+        <tr id="wt-today+2">
+            <td class="description"></td>
+            <td class="morning"><img src=""><p></p></td>
+            <td class="noon"><img src=""><p></p></td>
+            <td class="afternoon"><img src=""><p></p></td>
+        </tr>
+		<tr id="wt-s-today+3" class="small_res"><td class="s-description"></td></tr>
+        <tr id="wt-today+3">
+            <td class="description"></td>
+            <td class="morning"><img src=""><p></p></td>
+            <td class="noon"><img src=""><p></p></td>
+            <td class="afternoon"><img src=""><p></p></td>
+        </tr>
+    </table> -->
+	 <div class="table">
+        <div class="row wt-header">
+            <!-- <div style="width: 40%; padding-left: 25px;">Tag</div> -->
+            <div style="text-align: center;">VORMITTAG</div>
+            <div style="text-align: center;">NACHMITTAG</div>
+            <div style="text-align: center;">ABEND</div>
+        </div>
+        <div class="row" id="wt-today">
+            <div class="description">Heute - </div>
+			<div class="weather_detail">
+				<div class="morning">Hi<div></div></div>
+				<div class="noon"><img src=""><p></p></div>
+				<div class="afternoon"><img src=""><p></p></div>
+			</div>
+        </div>
+        <div class="row" id="wt-today+1">
+            <div class="description">Morgen - </div>
+           	<div class="weather_detail">
+				<div class="morning">Hi<div></div></div>
+				<div class="noon"><img src=""><p></p></div>
+				<div class="afternoon"><img src=""><p></p></div>
+			</div>
+        </div>
+        <div class="row" id="wt-today+2">
+            <div class="description"></div>
+            <div class="weather_detail">
+				<div class="morning">Hi<div></div></div>
+				<div class="noon"><img src=""><p></p></div>
+				<div class="afternoon"><img src=""><p></p></div>
+			</div>
+        </div>
+        <div class="row" id="wt-today+3">
+            <div class="description"></div>
+            <div class="weather_detail">
+				<div class="morning">Hi<div></div></div>
+				<div class="noon"><img src=""><p></p></div>
+				<div class="afternoon"><img src=""><p></p></div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<!-- weather forecast script-->
+<script>
+    document.addEventListener('DOMContentLoaded', get_weather_data);
+
+
+
+// example "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
+
+
+const weekDays = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+    const codes = {
+	"0":{
+		"day":{
+			"description":"Sonnig",
+			"image":"A.png"
+		},
+		"night":{
+			"description":"Klar",
+			"image":"-.png"
+		}
+	},
+	"1":{
+		"day":{
+			"description":"Hauptsächlich sonnig",
+			"image":"B.png"
+		},
+		"night":{
+			"description":"Hauptsächlich klar",
+			"image":"halbmond.png"
+		}
+	},
+	"2":{
+		"day":{
+			"description":"Teilweise bewölkt",
+			"image":"C.png"
+		},
+		"night":{
+			"description":"Teilweise bewölkt",
+			"image":"bewolkte-nacht.png"
+		}
+	},
+	"3":{
+		"day":{
+			"description":"Wolkig",
+			"image":"E.png"
+		},
+		"night":{
+			"description":"Wolkig",
+			"image":"E.png"
+		}
+	},
+	"45":{
+		"day":{
+			"description":"Nebelig",
+			"image":"T.png"
+		},
+		"night":{
+			"description":"Nebelig",
+			"image":"T.png"
+		}
+	},
+	"48":{
+		"day":{
+			"description":"Raureifnebel",
+			"image":"T.png"
+		},
+		"night":{
+			"description":"Raureifnebel",
+			"image":"T.png"
+		}
+	},
+	"51":{
+		"day":{
+			"description":"Leichter Nieselregen",
+			"image":"R.png"
+		},
+		"night":{
+			"description":"Leichter Nieselregen",
+			"image":"R.png"
+		}
+	},
+	"53":{
+		"day":{
+			"description":"Nieselregen",
+			"image":"T.png"
+		},
+		"night":{
+			"description":"Nieselregen",
+			"image":"T.png"
+		}
+	},
+	"55":{
+		"day":{
+			"description":"Starker Nieselregen",
+			"image":"R.png"
+		},
+		"night":{
+			"description":"Starker Nieselregen",
+			"image":"R.png"
+		}
+	},
+	"56":{
+		"day":{
+			"description":"Leichter eiskalter Nieselregen",
+			"image":"R.png"
+		},
+		"night":{
+			"description":"Leichter eiskalter Nieselregen",
+			"image":"R.png"
+		}
+	},
+	"57":{
+		"day":{
+			"description":"Eisiger Nieselregen",
+			"image":"R.png"
+		},
+		"night":{
+			"description":"Eisiger Nieselregen",
+			"image":"R.png"
+		}
+	},
+	"61":{
+		"day":{
+			"description":"Leichter Regen",
+			"image":"J.png"
+		},
+		"night":{
+			"description":"Leichter Regen",
+			"image":"J.png "
+		}
+	},
+	"63":{
+		"day":{
+			"description":"Regen",
+			"image":"H.png"
+		},
+		"night":{
+			"description":"Regen",
+			"image":"H.png "
+		}
+	},
+	"65":{
+		"day":{
+			"description":"Starker Regen",
+			"image":"I.png"
+		},
+		"night":{
+			"description":"Starker Regen",
+			"image":"I.png"
+		}
+	},
+	"66":{
+		"day":{
+			"description":"Leichter Eisregen",
+			"image":"http://openweathermap.org/img/wn/10d@2x.png"
+		},
+		"night":{
+			"description":"Leichter Eisregen",
+			"image":"http://openweathermap.org/img/wn/10n@2x.png"
+		}
+	},
+	"67":{
+		"day":{
+			"description":"Eisiger Regen",
+			"image":"http://openweathermap.org/img/wn/10d@2x.png"
+		},
+		"night":{
+			"description":"Eisiger Regen",
+			"image":"http://openweathermap.org/img/wn/10n@2x.png"
+		}
+	},
+	"71":{
+		"day":{
+			"description":"Leichter Schnee",
+			"image":"N.png "
+		},
+		"night":{
+			"description":"Leichter Schnee",
+			"image":"N.png "
+		}
+	},
+	"73":{
+		"day":{
+			"description":"Schnee",
+			"image":"O.png "
+		},
+		"night":{
+			"description":"Schnee",
+			"image":"O.png "
+		}
+	},
+	"75":{
+		"day":{
+			"description":"Starker Schneefall",
+			"image":"P.png "
+		},
+		"night":{
+			"description":"Starker Schneefall",
+			"image":"P.png "
+		}
+	},
+	"77":{
+		"day":{
+			"description":"Schneekörner",
+			"image":"P.png"
+		},
+		"night":{
+			"description":"Schneekörner",
+			"image":"P.png"
+		}
+	},
+	"80":{
+		"day":{
+			"description":"Leichte Schauer",
+			"image":"J.png"
+		},
+		"night":{
+			"description":"Leichte Schauer",
+			"image":"J.png"
+		}
+	},
+	"81":{
+		"day":{
+			"description":"Schauer",
+			"image":"H.png"
+		},
+		"night":{
+			"description":"Schauer",
+			"image":"H.png"
+		}
+	},
+	"82":{
+		"day":{
+			"description":"Starke Schauer",
+			"image":"I.png"
+		},
+		"night":{
+			"description":"Starke Schauer",
+			"image":"I.png"
+		}
+	},
+	"85":{
+		"day":{
+			"description":"Leichte Schneeschauer",
+			"image":"N.png"
+		},
+		"night":{
+			"description":"Leichte Schneeschauer",
+			"image":"N.png"
+		}
+	},
+	"86":{
+		"day":{
+			"description":"Schneeschauer",
+			"image":"O.png"
+		},
+		"night":{
+			"description":"Schneeschauer",
+			"image":"O.png"
+		}
+	},
+	"95":{
+		"day":{
+			"description":"Gewitter",
+			"image":"U.png"
+		},
+		"night":{
+			"description":"Gewitter",
+			"image":"V.png"
+		}
+	},
+	"96":{
+		"day":{
+			"description":"Leichte Gewitter mit Hagel",
+			"image":"V.png"
+		},
+		"night":{
+			"description":"Leichte Gewitter mit Hagel",
+			"image":"V.png"
+		}
+	},
+	"99":{
+		"day":{
+			"description":"Gewitter mit Hagel",
+			"image":"Z.png"
+		},
+		"night":{
+			"description":"Gewitter mit Hagel",
+			"image":"X.png"
+		}
+	}
+}
+
+// 47.650964010194805, 12.321436283690051 Bellevue-walchsee
+
+const latitude = 47.650964010194805;
+const longitude = 12.321436283690051;
+
+const days = ["today", "today+1", "today+2", "today+3"]
+ //indexes = 7, 14, 20  +24
+const daytimes = {
+    "morning": 7, 
+    "noon": 14, 
+    "afternoon": 20
+    // "evening": 23
+}
+
+let weather_data;
+let is_day = 'day';
+
+
+function get_weather_data() {
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
+    .then(result => result.json())
+    .then(data =>{
+        weather_data = data;   
+
+        for (let day of days){
+            newdate = new Date(weather_data.daily.time[days.indexOf(day)]);
+			// let s_description = document.getElementById(`wt-s-${day}`).getElementsByClassName("s-description");
+            let description = document.getElementById(`wt-${day}`).getElementsByClassName("description");
+            description[0].innerHTML += format_date(weather_data.daily.time[days.indexOf(day)]) + " " + weekDays[newdate.getDay()]
+			// s_description[0].innerHTML += format_date(weather_data.daily.time[days.indexOf(day)]) + " " + weekDays[newdate.getDay()]
+            
+                set_forecast(day, data.hourly)                       
+        }
+    })
+}
+
+function set_forecast(day, data) {
+    for(let daytime of Object.keys(daytimes)){
+
+    let hourly_index = daytimes[daytime] + 24 * days.indexOf(day);
+
+    let img_temp = document.getElementById(`wt-${day}`).getElementsByClassName(daytime)[0].innerHTML = 
+        '<div class="d-flex">'+
+            '<div>'+
+            '<img src="../files/weather_icons/png/'+ codes[data.weather_code[hourly_index]][is_day].image+'">' + "<p>"+ 
+            Math.round(data.temperature_2m[hourly_index]) +" °C</p>" +
+            '</div>'+
+            '<div>'+
+            codes[data.weather_code[hourly_index]][is_day].description+
+            '</div>'+
+        '</div>';       
+}}
+
+function format_date(date) {
+    date_array = date.split("-");
+    return date_array[2]+"."+date_array[1]+"."+date_array[0];
+}
+</script>
+<!-- EndOf weather forecast -->
+
+</body>
+</html>
