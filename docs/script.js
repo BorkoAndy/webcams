@@ -19,7 +19,7 @@
 
     L.marker([47.268459921217996, 13.497015878036473]).addTo(map)
         .bindPopup(
-            'Gnadealm <img src="../files/img/gnadealm.png"></img> <a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a>')
+            'Gnadealm <img src="files/img/gnadealm.png"></img> <a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -29,144 +29,144 @@
 
     L.marker([47.248361594114606, 13.557181568692029]).addTo(map)
         .bindPopup(
-            'Pension Gloria <img src="../files/img/gloria.png"></img> <a href="https://www.gloria.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+            'Pension Gloria <img src="files/img/gloria.png"></img> <a href="https://www.gloria.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.268619180094426, 13.575836573046091]).addTo(map)
         .bindPopup(
-            'Hundskogel <img src="../files/img/Hundskogel.png"></img> <a href="https://de.wikipedia.org/wiki/Hundskogel" target="_blank">Wikipedia</a> <a href="https://obertauern.panomax.com/hundskogel?r=287&z=100&tl=0" target="_blank">Webcam</a>')
+            'Hundskogel <img src="files/img/Hundskogel.png"></img> <a href="https://de.wikipedia.org/wiki/Hundskogel" target="_blank">Wikipedia</a> <a href="https://obertauern.panomax.com/hundskogel?r=287&z=100&tl=0" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24143007832632, 13.556887165244643]).addTo(map)
         .bindPopup(
-            'Gamsleiten 1 <img src="../files/img/gamsleiten-1.jpg"></img> <a href="https://www.ski-obertauern.at/" target="_blank">Website</a> <a href="https://obertauern.panomax.com/gamsleiten?r=156&z=100&tl=0"  target="_blank">Webcam</a>')
+            'Gamsleiten 1 <img src="files/img/gamsleiten-1.jpg"></img> <a href="https://www.ski-obertauern.at/" target="_blank">Website</a> <a href="https://obertauern.panomax.com/gamsleiten?r=156&z=100&tl=0"  target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.245830671070124, 13.56157372689441]).addTo(map)
         .bindPopup(
-            'Hotel Schneider <img src="../files/img/schneider.png"></img> <a href="https://www.schneider.at/de/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://webcam.schneider.at/obertauern-hotel-schneider.jpg?t=1743419196423`)" target="_blank">Webcam</a>')
+            'Hotel Schneider <img src="files/img/schneider.png"></img> <a href="https://www.schneider.at/de/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://webcam.schneider.at/obertauern-hotel-schneider.jpg?t=1743419196423`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
     
     L.marker([47.25153413144079, 13.53972671340274]).addTo(map)
         .bindPopup(
-            'Haus Petergstamm <img src="../files/img/petergstamm.png"> </img><a href="https://www.petergstamm-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://petergstamm-obertauern.at/images/webcam/webcam_obertauern.jpg`)" target="_blank">Webcam</a>')
+            'Haus Petergstamm <img src="files/img/petergstamm.png"> </img><a href="https://www.petergstamm-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://petergstamm-obertauern.at/images/webcam/webcam_obertauern.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.25223770402306, 13.53102546313954]).addTo(map)
         .bindPopup(
-            'Almschloessl <img src="../files/img/Almschloessl.png"> </img><a href="https://www.almschloessl.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.almschloessl.com/~schrott01/Schrotteralm_Full_HiRes.jpg`)" target="_blank">Webcam</a>')
+            'Almschloessl <img src="files/img/Almschloessl.png"> </img><a href="https://www.almschloessl.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.almschloessl.com/~schrott01/Schrotteralm_Full_HiRes.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.2414797516077, 13.572123072926688]).addTo(map)
         .bindPopup(
-            'Breitlehenalm <img src="../files/img/breitlehenalm.png"></img> <a href="https://www.breitlehenalm.at/de/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://obertauern.breitlehenalm.com/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+            'Breitlehenalm <img src="files/img/breitlehenalm.png"></img> <a href="https://www.breitlehenalm.at/de/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://obertauern.breitlehenalm.com/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24626875318407, 13.562128571074563]).addTo(map)
         .bindPopup(
-            'Hotel Panorama <img src="../files/img/panorama.png"></img> <a href="https://www.panorama-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`http://www.panorama-obertauern.at/webcam-obertauern/webcam1.jpg`)" target="_blank">Webcam</a>')
+            'Hotel Panorama <img src="files/img/panorama.png"></img> <a href="https://www.panorama-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`http://www.panorama-obertauern.at/webcam-obertauern/webcam1.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
         
     L.marker([47.24786475978527, 13.560469791727801]).addTo(map)
         .bindPopup(
-            'Gasthof Sailer <img src="../files/img/sailer.png"></img> <a href="https://www.sailer-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.sailer-obertauern.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+            'Gasthof Sailer <img src="files/img/sailer.png"></img> <a href="https://www.sailer-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.sailer-obertauern.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24218554468686, 13.572355884566413]).addTo(map)
         .bindPopup(
-            'Hotel Auerhahn <img src="../files/img/auerhahn.png"></img> <a href="https://www.auerhahn-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.auerhahn-obertauern.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+            'Hotel Auerhahn <img src="files/img/auerhahn.png"></img> <a href="https://www.auerhahn-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.auerhahn-obertauern.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.26473552079525, 13.563627574321607]).addTo(map)
         .bindPopup(
-            'Seekar Talstation <img src="../files/img/SeekarTal.png"> <a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern1/?frame=1`)" target="_blank">Webcam</a>')
+            'Seekar Talstation <img src="files/img/SeekarTal.png"> <a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern1/?frame=1`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.27069833184182, 13.547622830588693]).addTo(map)
         .bindPopup(
-            'Seekar Bergstation <img src="../files/img/SeekarBerg.png"></img><a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern2/?frame=1`)"  target="_blank">Webcam</a>')
+            'Seekar Bergstation <img src="files/img/SeekarBerg.png"></img><a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern2/?frame=1`)"  target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
     
     L.marker([47.26429939818162, 13.56484205573102]).addTo(map)
-        .bindPopup('Hotel Seekarhaus <img src="../files/img/seekarhaus.png"></img> <a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern3/?frame=1`)"  target="_blank">Webcam</a>')
+        .bindPopup('Hotel Seekarhaus <img src="files/img/seekarhaus.png"></img> <a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern3/?frame=1`)"  target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.26010632089782, 13.564853406758408]).addTo(map)
-        .bindPopup('Hundsfeldsee <img src="../files/img/hundsfeldsee.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="onclick="openFrame(`https://www.foto-webcam.eu/webcam/hundsfeldsee/?frame=1`)" target="_blank">Webcam</a>')
+        .bindPopup('Hundsfeldsee <img src="files/img/hundsfeldsee.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="onclick="openFrame(`https://www.foto-webcam.eu/webcam/hundsfeldsee/?frame=1`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.247705, 13.559235]).addTo(map)
-        .bindPopup('Zehnerkar <img src="../files/img/zehnerkar.png"></img> <a href="https://www.zehnerkar.at/" target="_blank">Website</a> <a href="#" onclick="openCodeWindow()" target="_blank">Webcam</a>')
+        .bindPopup('Zehnerkar <img src="files/img/zehnerkar.png"></img> <a href="https://www.zehnerkar.at/" target="_blank">Website</a> <a href="#" onclick="openCodeWindow()" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.249752, 13.54937]).addTo(map)
-        .bindPopup('Kirchbuehel <img src="../files/img/kirchbuehel.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Kirchbuehel <img src="files/img/kirchbuehel.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.250611, 13.545803]).addTo(map)
-        .bindPopup('Gruenwaldkopf <img src="../files/img/gruenwaldkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Gruenwaldkopf <img src="files/img/gruenwaldkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.261822, 13.545545]).addTo(map)
-        .bindPopup('Hochalmkopf <img src="../files/img/Hochalmkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Hochalmkopf <img src="files/img/Hochalmkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.264019, 13.565097]).addTo(map)
-        .bindPopup('Seekar <img src="../files/img/seekar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Seekar <img src="files/img/seekar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.246892, 13.566824]).addTo(map)
-        .bindPopup('Plattenkar <img src="../files/img/plattenkar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Plattenkar <img src="files/img/plattenkar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24693, 13.561242]).addTo(map)
-        .bindPopup('Gamsleiten <img src="../files/img/gamsleiten.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Gamsleiten <img src="files/img/gamsleiten.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24146, 13.572952]).addTo(map)
-        .bindPopup('Schaidberg  <img src="../files/img/schaidberg.png"></img>  <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Schaidberg  <img src="files/img/schaidberg.png"></img>  <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
