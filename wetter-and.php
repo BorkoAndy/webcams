@@ -1,75 +1,81 @@
  
- 
-
-
-
- 
 <style>
-    table{
-        width: 100%;
-        background-color: #795F0C;
-    }
-	.small_res{
-		display: none;
-	}
-    .wt-header {
-        background-color: #7f9aa1;
-        border: 3px white solid;
-        color: #f2f2f2;
-        width: 40%;
-        padding-right: 25px;
-        padding-left: 25px;
-        text-align: left;
-        text-transform: uppercase;
+        table{
+            width: 100%;
+            background-color: #795F0C;
+        }
+        .small_res{
+            display: none;
+        }
+        .wt-header {
+			width: 100%;
+            background-color: #7f9aa1;
+            border: 3px white solid;
+            color: #f2f2f2;            
+            /* padding-right: 25px;
+            padding-left: 25px; */
+            text-align: left;
+            text-transform: uppercase;
+			flex-wrap: nowrap;
+            
+        }
+        body {
+            background-color: #f2f2f2;
+        }
+        tr:not(.wt-header){
+            background-color: #f2f2f2; 
+            color: #795F0C;
+			flex-wrap: wrap;
+        }
         
-    }
-    body {
-        background-color: #f2f2f2;
-    }
-    tr:not(.wt-header){
-        background-color: #f2f2f2; 
-		color: #795F0C;
-    }
-    
-    .d-flex {
-        display: flex;
-        flex-direction: column;
-    }
-    .d-flex>div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px 10px 0px 10px;
-    }
-    .description {
-        padding-left: 25px;
-        color:#795F0C;
-        font: 27px Source Serif Pro;;
-    }
-	.s-description{
-		width: 100%;
-	}
-	@media (max-width: 767px){
-		.description {
-			display: none;
-		}
-		.small_res{
-			display: block;
-		}
-		.d-flex>div{
+        .d-flex {
+            display: flex;
+            flex-direction: column;
+        }
+        .d-flex>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 10px 0px 10px;
+        }
+        .description {
+            padding-left: 25px;
+            color:#795F0C;
+            font: 27px Source Serif Pro;;
+        }
+        .s-description{
+            width: 100%;
+        }
+		.weather_detail,
+		.wt-header{
 			display: flex;
-			flex-direction: column;
+			justify-content: space-around;
+			
 		}
-		table {
-			background-color: #f2f2f2;
-			width: 95%
-		};
-		
-	}
-</style>
+		.row{
+			margin-bottom: 30px;
+		}
+        @media (max-width: 767px){
+            .description {
+                display: none;
+            }
+            .small_res{
+                display: block;
+            }
+            .d-flex>div{
+                display: flex;
+                flex-direction: column;
+            }
+            table {
+                background-color: #f2f2f2;
+                width: 95%
+            };
+            
+        }
+    </style>
     
 <div id="weather-table">
-    <table>
+    <!-- <table>
         <tr class="wt-header">
             <td class="description" style="width: 40%; padding-left: 25px;">Tag</td>
             <td style="text-align: center;">VORMITTAG</td>
@@ -105,10 +111,10 @@
             <td class="noon"><img src=""><p></p></td>
             <td class="afternoon"><img src=""><p></p></td>
         </tr>
-    </table>
-	 <!-- <div class="table">
-        <div claclass="row" ss="wt-header">
-            <div style="width: 40%; padding-left: 25px;">Tag</div>
+    </table> -->
+	 <div class="table">
+        <div class="row wt-header">
+            <!-- <div style="width: 40%; padding-left: 25px;">Tag</div> -->
             <div style="text-align: center;">VORMITTAG</div>
             <div style="text-align: center;">NACHMITTAG</div>
             <div style="text-align: center;">ABEND</div>
@@ -146,7 +152,7 @@
 			</div>
         </div>
     </div>
-</div> -->
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', get_weather_data);
