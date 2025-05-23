@@ -255,7 +255,7 @@
       win.document.write(code);
       win.document.close();
     }
-
+// Not ready
       function openWeather(lat, lon) {
       const code = `
         <!DOCTYPE html>
@@ -274,3 +274,5 @@
       win.document.write(code);
       win.document.close();
     }
+
+//EndOf not ready

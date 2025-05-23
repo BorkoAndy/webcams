@@ -387,11 +387,11 @@ const weekDays = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Fr
 	"82":{
 		"day":{
 			"description":"Starke Schauer",
-			"image":"zamg/png/I.png"
+			"image":"zamg/png/H.png"
 		},
 		"night":{
 			"description":"Starke Schauer",
-			"image":"zamg/png/I.png"
+			"image":"zamg/png/H.png"
 		}
 	},
 	"85":{
