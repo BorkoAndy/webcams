@@ -19,7 +19,7 @@
 
     L.marker([47.268459921217996, 13.497015878036473]).addTo(map)
         .bindPopup(
-            'Gnadealm <img src="files/img/gnadealm.png"></img> <a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a>')
+            'Gnadealm <img src="files/img/gnadealm.png"></img> <a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a> <a href="#" onclick="openWetter(`47.268459921217996, 13.497015878036473`)" target="_blank">Wetter</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -118,7 +118,7 @@
         })
 
     L.marker([47.26010632089782, 13.564853406758408]).addTo(map)
-        .bindPopup('Hundsfeldsee <img src="files/img/hundsfeldsee.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="onclick="openFrame(`https://www.foto-webcam.eu/webcam/hundsfeldsee/?frame=1`)" target="_blank">Webcam</a>')
+        .bindPopup('Hundsfeldsee <img src="files/img/hundsfeldsee.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="onclick="openFrame(`https://www.foto-webcam.eu/webcam/hundsfeldsee/?frame=1`)" target="_blank">Webcam kaputt</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -130,43 +130,43 @@
         })
 
     L.marker([47.249752, 13.54937]).addTo(map)
-        .bindPopup('Kirchbuehel <img src="files/img/kirchbuehel.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Kirchbuehel <img src="files/img/kirchbuehel.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/kirchbuehel.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/zhk.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.250611, 13.545803]).addTo(map)
-        .bindPopup('Gruenwaldkopf <img src="files/img/gruenwaldkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Gruenwaldkopf <img src="files/img/gruenwaldkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/gruenwaldkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gwk.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.261822, 13.545545]).addTo(map)
-        .bindPopup('Hochalmkopf <img src="files/img/Hochalmkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Hochalmkopf <img src="https://www.obertauern-ski.at/hochalmkopf.jpg"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/hochalmkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.264019, 13.565097]).addTo(map)
-        .bindPopup('Seekar <img src="files/img/seekar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Seekar <img src="files/img/seekar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/seekar.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/skr.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.246892, 13.566824]).addTo(map)
-        .bindPopup('Plattenkar <img src="files/img/plattenkar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Plattenkar <img src="files/img/plattenkar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/plattenkar.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/pkr.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24693, 13.561242]).addTo(map)
-        .bindPopup('Gamsleiten <img src="files/img/gamsleiten.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Gamsleiten <img src="files/img/gamsleiten.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/gamsleiten.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gml.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.24146, 13.572952]).addTo(map)
-        .bindPopup('Schaidberg  <img src="files/img/schaidberg.png"></img>  <a href="#" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Schaidberg  <img src="files/img/schaidberg.png"></img>  <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/schaidberg.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/sbg.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -207,7 +207,7 @@
       };
     }
     function openFrame(frame_src) {
-        event.preventDefault();
+        // event.preventDefault();
         const width = 500;
         const height = 400;
         const screenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
@@ -253,4 +253,24 @@
       const win = window.open("", "_blank", "width=610,height=400");
       win.document.open();
       win.document.write(code);
-      win.document.close();}
+      win.document.close();
+    }
+
+      function openWeather(lat, lon) {
+      const code = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Weather</title>                     
+        </head>
+        <body>
+         
+        </body>
+        </html>
+      `;
+
+      const win = window.open("", "_blank", "width=1400,height=800");
+      win.document.open();
+      win.document.write(code);
+      win.document.close();
+    }
