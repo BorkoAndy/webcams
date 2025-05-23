@@ -124,7 +124,7 @@
         })
 
     L.marker([47.247705, 13.559235]).addTo(map)
-        .bindPopup('Zehnerkar <img src="files/img/zehnerkar.png"></img> <a href="https://www.zehnerkar.at/" target="_blank">Website</a> <a href="#" onclick="openCodeWindow()" target="_blank">Webcam</a>')
+        .bindPopup('Zehnerkar <img src="files/img/zehnerkar.png"></img> <a href="https://www.zehnerkar.at/" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/zehnerkar.jpg`, `//s1.live-panorama.com/keblivestreaming/streams/zkb.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -229,25 +229,28 @@
         `);
       };
       
-     function openCodeWindow() {
+     function openCodeWindow(poster, source) {
       const code = `
         <!DOCTYPE html>
         <html>
         <head>
           <title>My New Window</title>
+            <script src="files/js/hls.js"></script>
+            <script src="files/js/webcams_player.js"></script>         
         </head>
         <body>
           <video id="camvideo_1" 
                     onclick="play_webcam_video('camvideo_1')" 
-                    poster="https://www.obertauern-ski.at/zehnerkar.jpg" 
-                    src="//s1.live-panorama.com/keblivestreaming/streams/zkb.m3u8" 
-                    type="application/x-mpegURL" muted="muted" controls role="application">
+                    poster=${poster} 
+                    src=${source} 
+                    type="application/x-mpegURL" muted="muted" controls role="application"
+                    style="width:600px;">
                 </video>
         </body>
         </html>
       `;
 
-      const win = window.open("", "_blank", "width=600,height=400");
+      const win = window.open("", "_blank", "width=610,height=400");
       win.document.open();
       win.document.write(code);
       win.document.close();}
