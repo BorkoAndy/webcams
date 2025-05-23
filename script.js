@@ -19,7 +19,7 @@
 
     L.marker([47.268459921217996, 13.497015878036473]).addTo(map)
         .bindPopup(
-            'Gnadealm <img src="../files/img/gnadealm.png"> </img><a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a>')
+            'Gnadealm <img src="files/img/gnadealm.png"> </img><a href="https://www.gnadenalm.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -36,7 +36,7 @@
 
     L.marker([47.268619180094426, 13.575836573046091]).addTo(map)
         .bindPopup(
-            'Hundskogel <img src="../files/img/Hundskogel.png"> </img><a href="https://de.wikipedia.org/wiki/Hundskogel" target="_blank">Wikipedia</a> <a href="https://obertauern.panomax.com/hundskogel?r=287&z=100&tl=0" target="_blank">Webcam</a>')
+            'Hundskogel <img src="files/img/Hundskogel.png"> </img><a href="https://de.wikipedia.org/wiki/Hundskogel" target="_blank">Wikipedia</a> <a href="https://obertauern.panomax.com/hundskogel?r=287&z=100&tl=0" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -57,14 +57,14 @@
     
     L.marker([47.25153413144079, 13.53972671340274]).addTo(map)
         .bindPopup(
-            'Haus Petergstamm <a href="https://www.petergstamm-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://petergstamm-obertauern.at/images/webcam/webcam_obertauern.jpg`)" target="_blank">Webcam</a>')
+            'Haus Petergstamm <img src="files/img/petergstamm.png"> </img><a href="https://www.petergstamm-obertauern.at/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://petergstamm-obertauern.at/images/webcam/webcam_obertauern.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
     L.marker([47.25223770402306, 13.53102546313954]).addTo(map)
         .bindPopup(
-            'Almschloessl <img src="../files/img/Almschloessl.png"> </img><a href="https://www.almschloessl.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.almschloessl.com/~schrott01/Schrotteralm_Full_HiRes.jpg`)" target="_blank">Webcam</a>')
+            'Almschloessl <img src="files/img/Almschloessl.png"> </img><a href="https://www.almschloessl.com/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.almschloessl.com/~schrott01/Schrotteralm_Full_HiRes.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -106,7 +106,7 @@
 
     L.marker([47.27069833184182, 13.547622830588693]).addTo(map)
         .bindPopup(
-            'Seekar Bergstation <img src="../files/img/SeekarBerg.png"></img><a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern2/?frame=1`)"  target="_blank">Webcam</a>')
+            'Seekar Bergstation <img src="files/img/SeekarBerg.png"></img><a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern2/?frame=1`)"  target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
@@ -142,7 +142,7 @@
         })
 
     L.marker([47.261822, 13.545545]).addTo(map)
-        .bindPopup('Hochalmkopf <img src="../files/img/Hochalmkopf.png"> </img><a href="https://www.cinderella-obertauern.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
+        .bindPopup('Hochalmkopf <img src="files/img/Hochalmkopf.png"> </img><a href="https://www.cinderella-obertauern.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.gloria.at/webcam/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
