@@ -821,7 +821,7 @@ function set_forecast(day, data) {
     let img_temp = document.getElementById(`wt-${day}`).getElementsByClassName(daytime)[0].innerHTML = 
         '<div class="d-flex">'+
             '<div>'+
-            '<img src="../files/weather_icons/png/'+ codes[data.weather_code[hourly_index]][is_day].image+'">' + "<p>"+ 
+            '<img src="files/weather_icons/png/'+ codes[data.weather_code[hourly_index]][is_day].image+'">' + "<p>"+ 
             Math.round(data.temperature_2m[hourly_index]) +" °C</p>" +
             '</div>'+
             '<div>'+
