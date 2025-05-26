@@ -2,7 +2,7 @@
     // Find english words for weather codes
     
     // Find all pictures
-    "template":{
+    "template":{		
 		"day":{
 			"description":{
 				"de":"",

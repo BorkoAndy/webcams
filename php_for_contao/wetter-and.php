@@ -1,6 +1,6 @@
  
 <style>
-        table{
+        .table{
             width: 100%;
             background-color: #795F0C;
         }
@@ -271,7 +271,7 @@ const weekDays = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Fr
 		},
 		"night":{
 			"description":"Eisiger Nieselregen",
-			"image":"zamg/png/R.png"
+			"image":"/R.png"
 		}
 	},
 	"61":{
@@ -490,7 +490,7 @@ function set_forecast(day, data) {
     let img_temp = document.getElementById(`wt-${day}`).getElementsByClassName(daytime)[0].innerHTML = 
         '<div class="d-flex">'+
             '<div>'+
-            '<img src="'+ codes[data.weather_code[hourly_index]][is_day].image+'">' + "<p>"+ 
+            '<img src="zamg/png/'+ codes[data.weather_code[hourly_index]][is_day].image+'">' + "<p>"+  //Change path here
             Math.round(data.temperature_2m[hourly_index]) +" °C</p>" +
             '</div>'+
             '<div>'+
