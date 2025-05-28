@@ -1,9 +1,75 @@
  
     var map = L.map('map').setView([47.261822, 13.545545], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.nc-werbung.at/">NC Werbung</a>'
-    }).addTo(map);
+    
+	//Layers
+	var layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: ''
+    });
 
+	//  L.tileLayer('https://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png', {
+	// minZoom: 9,
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors & ODbL, &copy; <a href="https://www.opensnowmap.org/iframes/data.html">www.opensnowmap.org</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+    // }).addTo(map);
+
+    //slopes -> can be added to other layers
+    // L.tileLayer('https://tile.waymarkedtrails.org/slopes/{z}/{x}/{y}.png', {
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    // }).addTo(map);
+
+    //MountainBike
+    // var WaymarkedTrails_mtb = L.tileLayer('https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    // });
+
+    //Cycling
+    // var WaymarkedTrails_cycling = L.tileLayer('https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    // });
+
+    //Hiking
+    // var WaymarkedTrails_hiking = L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    // });
+
+    // var TopPlusOpen_Color = 
+    // L.tileLayer('http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png', {
+	// maxZoom: 18,
+	// attribution: 'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>'
+    // });
+
+    //
+    // L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	// maxZoom: 17,
+	// attribution: ''
+    // }).addTo(map);
+
+    // Stadia_AlidadeSatellite 
+    // L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
+	// minZoom: 0,
+	// maxZoom: 20,
+	// attribution: '',
+	// ext: 'jpg'
+    // }).addTo(map);
+
+    // var Esri_WorldImagery
+    // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	// attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    // }).addTo(map);
+
+    //  var USGS_USImagery = 
+    // L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+	// maxZoom: 20,
+	// attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    // }).addTo(map);
+	layer.addTo(map);
+
+
+	// Markers
     L.marker([47.24862632545557, 13.562718780862054]).addTo(map)
         .bindPopup('Luerzer <a href="https://www.luerzer.at" target="_blank">Website</a> <a href="#" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {

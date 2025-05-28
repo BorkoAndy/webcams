@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="map_layers.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map"></div>
+
+    <select name="base_layers" id="base_layers">    
+      <option value="default_layer">Default</option>
+      <option value="TopPlus">TopPlus</option>    
+      <option value="OpenMap">OpenMap</option>
+      <option value="StadiaSat">StadiaSat</option> 
+      <option value="Esri">Esri</option>   
+  </select>
+
+   <select name="add_layers" id="add_layers">    
+      <option value="no_layer">No Layer</option>
+      <option value="pistes">Pistes</option>    
+      <option value="slopes">Slopes</option>
+      <option value="mtb">MountainBike</option>  
+      <option value="cycling">Cycling</option>
+      <option value="hiking">Hiking</option>  
+  </select>
+</body>
+</html>
