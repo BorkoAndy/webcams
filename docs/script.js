@@ -5,67 +5,7 @@
 	var layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: ''
     });
-
-	//  L.tileLayer('https://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png', {
-	// minZoom: 9,
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors & ODbL, &copy; <a href="https://www.opensnowmap.org/iframes/data.html">www.opensnowmap.org</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
-    // }).addTo(map);
-
-    //slopes -> can be added to other layers
-    // L.tileLayer('https://tile.waymarkedtrails.org/slopes/{z}/{x}/{y}.png', {
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    // }).addTo(map);
-
-    //MountainBike
-    // var WaymarkedTrails_mtb = L.tileLayer('https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    // });
-
-    //Cycling
-    // var WaymarkedTrails_cycling = L.tileLayer('https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    // });
-
-    //Hiking
-    // var WaymarkedTrails_hiking = L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    // });
-
-    // var TopPlusOpen_Color = 
-    // L.tileLayer('http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png', {
-	// maxZoom: 18,
-	// attribution: 'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>'
-    // });
-
-    //
-    // L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	// maxZoom: 17,
-	// attribution: ''
-    // }).addTo(map);
-
-    // Stadia_AlidadeSatellite 
-    // L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
-	// minZoom: 0,
-	// maxZoom: 20,
-	// attribution: '',
-	// ext: 'jpg'
-    // }).addTo(map);
-
-    // var Esri_WorldImagery
-    // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	// attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    // }).addTo(map);
-
-    //  var USGS_USImagery = 
-    // L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
-	// maxZoom: 20,
-	// attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
-    // }).addTo(map);
+	
 	layer.addTo(map);
 
 
@@ -89,9 +29,7 @@
         .on('mouseover', function (e) {
             this.openPopup();
         })
-        // marker.on('mouseout', function (e) {
-        //     this.closePopup();
-        // });
+        
 
     L.marker([47.248361594114606, 13.557181568692029]).addTo(map)
         .bindPopup(
@@ -135,7 +73,7 @@
             this.openPopup();
         })
 
-    L.marker([47.2414797516077, 13.572123072926688]).addTo(map)
+    L.marker([47.2414797516077, 13.571523072926688]).addTo(map)
         .bindPopup(
             'Breitlehenalm <img src="files/img/breitlehenalm.png"></img> <a href="https://www.breitlehenalm.at/de/" target="_blank">Website</a> <a href="#" onclick="openImage(`https://obertauern.breitlehenalm.com/obertauern-webcam.jpg`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
@@ -163,7 +101,7 @@
             this.openPopup();
         })
 
-    L.marker([47.26473552079525, 13.563627574321607]).addTo(map)
+    L.marker([47.26473552079525, 13.562627574321607]).addTo(map)
         .bindPopup(
             'Seekar Talstation <img src="files/img/SeekarTal.png"> <a href="https://www.seekarhaus.at/de/" target="_blank">Website</a> <a href="#" onclick="openFrame(`https://www.foto-webcam.eu/webcam/obertauern1/?frame=1`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
@@ -213,7 +151,7 @@
             this.openPopup();
         })
 
-    L.marker([47.264019, 13.565097]).addTo(map)
+    L.marker([47.264019, 13.568097]).addTo(map)
         .bindPopup('Seekar <img src="files/img/seekar.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/seekar.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/skr.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
@@ -225,13 +163,13 @@
             this.openPopup();
         })
 
-    L.marker([47.24693, 13.561242]).addTo(map)
+    L.marker([47.24593, 13.560242]).addTo(map)
         .bindPopup('Gamsleiten <img src="files/img/gamsleiten.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/gamsleiten.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gml.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
-    L.marker([47.24146, 13.572952]).addTo(map)
+    L.marker([47.24246, 13.574952]).addTo(map)
         .bindPopup('Schaidberg  <img src="files/img/schaidberg.png"></img>  <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/schaidberg.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/sbg.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
