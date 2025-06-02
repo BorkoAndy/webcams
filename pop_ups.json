@@ -1,0 +1,63 @@
+{
+    "0":
+        {
+            "name": "Leurzer",
+            "latitude": "47.24862632545557",
+            "longitude": "13.562718780862054",
+            "image": "",
+            "website": "https://www.luerzer.at",
+            "webcam": "",
+            "cam_type": ""
+        },
+    "1":
+        {
+            "name": "Cinderella",
+            "latitude": "47.24754641144264",
+            "longitude": "13.56290231895924",
+            "image": "cinderella.jpg",
+            "website": "https://www.cinderella-obertauern.at",
+            "webcam": "https://www.cinderella-obertauern.at/obertauern-webcam/hotel-cinderella-obertauern.jpg",
+            "cam_type": "image"
+        },
+    "2":
+        {
+            "name": "Gnadealm",
+            "latitude": "47.268459921217996",
+            "longitude": "13.497015878036473",
+            "image": "gnadealm.png",
+            "website": "https://www.gnadenalm.com/",
+            "webcam": "https://www.gnadenalm.com/obertauern_webcam/obertauern_webcam.jpg",
+            "cam_type": "image"
+        },
+    "3":
+        {
+            "name": "Pension Gloria",
+            "latitude": "47.248361594114606",
+            "longitude": "13.557181568692029",
+            "image": "gloria.png",
+            "website": "https://www.gloria.at",
+            "webcam": "https://www.gloria.at/webcam/obertauern-webcam.jpg",
+            "cam_type": "image"
+        },
+    "4":
+        {
+            "name": "Hundskogel",
+            "latitude": "47.268619180094426",
+            "longitude": "13.575836573046091",
+            "image": "Hundskogel.png",
+            "website": "https://de.wikipedia.org/wiki/Hundskogel",
+            "webcam": "https://obertauern.panomax.com/hundskogel?r=287&z=100&tl=0",
+            "cam_type": "panomax"
+        },
+    "5":
+        {
+            "name": "Gamsleiten 1",
+            "latitude": "47.24143007832632",
+            "longitude": "13.556887165244643",
+            "image": "gamsleiten-1.jpg",
+            "website": "https://www.ski-obertauern.at/",
+            "webcam": "https://obertauern.panomax.com/gamsleiten?r=156&z=100&tl=0",
+            "cam_type": "panomax"
+        }
+
+}

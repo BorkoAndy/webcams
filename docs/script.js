@@ -11,14 +11,14 @@
 
 	// Markers
     L.marker([47.24862632545557, 13.562718780862054]).addTo(map)
-        .bindPopup('Luerzer <a href="https://www.luerzer.at" target="_blank">Website</a> <a href="#" target="_blank">Webcam</a>')
+        .bindPopup('Luerzer <img src="files/img/luerzer.png"><a href="https://www.luerzer.at" target="_blank">Website</a> <a href="#" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
 
         
     L.marker([47.24754641144264, 13.56290231895924]).addTo(map)
-        .bindPopup('Cinderella <a href="https://www.cinderella-obertauern.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.cinderella-obertauern.at/obertauern-webcam/hotel-cinderella-obertauern.jpg`) target="_blank">Webcam</a>')
+        .bindPopup('Cinderella <img src="files/img/cinderella.jpg"><a href="https://www.cinderella-obertauern.at" target="_blank">Website</a> <a href="#" onclick="openImage(`https://www.cinderella-obertauern.at/obertauern-webcam/hotel-cinderella-obertauern.jpg`) target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })
