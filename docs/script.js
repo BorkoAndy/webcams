@@ -146,7 +146,7 @@
         })
 
     L.marker([47.261822, 13.545545]).addTo(map)
-        .bindPopup('Hochalmkopf <img src="https://www.obertauern-ski.at/hochalmkopf.jpg"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/hochalmkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8`)" target="_blank">Webcam</a>')
+        .bindPopup('Hochalmkopf <img src="files/img/Hochalmkopf.png"></img> <a href="#" target="_blank">Website</a> <a href="#" onclick="openCodeWindow(`https://www.obertauern-ski.at/hochalmkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8`)" target="_blank">Webcam</a>')
         .on('mouseover', function (e) {
             this.openPopup();
         })

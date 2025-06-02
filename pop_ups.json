@@ -4,7 +4,7 @@
             "name": "Leurzer",
             "latitude": "47.24862632545557",
             "longitude": "13.562718780862054",
-            "image": "",
+            "image": "luerzer.png",
             "website": "https://www.luerzer.at",
             "webcam": "",
             "cam_type": ""
@@ -58,6 +58,197 @@
             "website": "https://www.ski-obertauern.at/",
             "webcam": "https://obertauern.panomax.com/gamsleiten?r=156&z=100&tl=0",
             "cam_type": "panomax"
+        },
+    "6":
+        {
+            "name": "Hotel Schneider",
+            "latitude": "47.245830671070124",
+            "longitude": "13.56157372689441",
+            "image": "schneider.png",
+            "website": "https://www.schneider.at/de/",
+            "webcam": "https://webcam.schneider.at/obertauern-hotel-schneider.jpg?t=1743419196423",
+            "cam_type": "image"
+        },
+    "7":
+        {
+            "name": "Haus Petergstamm",
+            "latitude": "47.25153413144079",
+            "longitude": "13.56157372689441",
+            "image": "petergstamm.png",
+            "website": "https://www.petergstamm-obertauern.at/",
+            "webcam": "https://petergstamm-obertauern.at/images/webcam/webcam_obertauern.jpg",
+            "cam_type": "image"
+        },
+    "8":
+        {
+            "name": "Almschloessl",
+            "latitude": "47.25223770402306",
+            "longitude": "13.53102546313954",
+            "image": "Almschloessl.png",
+            "website": "https://www.almschloessl.com/",
+            "webcam": "https://www.almschloessl.com/~schrott01/Schrotteralm_Full_HiRes.jpg",
+            "cam_type": "image"
+        },
+    "9":
+        {
+            "name": "Breitlehenalm",
+            "latitude": "47.2414797516077",
+            "longitude": "13.571523072926688",
+            "image": "breitlehenalm.png",
+            "website": "https://www.breitlehenalm.at/de/",
+            "webcam": "https://obertauern.breitlehenalm.com/obertauern-webcam.jpg",
+            "cam_type": "image"
+        },
+    "10":
+        {
+            "name": "Hotel Panorama",
+            "latitude": "47.24626875318407",
+            "longitude": "13.562128571074563",
+            "image": "panorama.png",
+            "website": "https://www.panorama-obertauern.at/",
+            "webcam": "http://www.panorama-obertauern.at/webcam-obertauern/webcam1.jpg",
+            "cam_type": "image"
+        },
+    "11":
+        {
+            "name": "Gasthof Sailer",
+            "latitude": "47.24786475978527",
+            "longitude": "13.560469791727801",
+            "image": "sailer.png",
+            "website": "https://www.sailer-obertauern.at/",
+            "webcam": "https://www.sailer-obertauern.at/webcam/obertauern-webcam.jpg",
+            "cam_type": "image"
+        },
+    "12":
+        {
+            "name": "Hotel Auerhahn",
+            "latitude": "47.24218554468686",
+            "longitude": "13.572355884566413",
+            "image": "auerhahn.png",
+            "website": "https://www.auerhahn-obertauern.at/",
+            "webcam": "https://www.auerhahn-obertauern.at/webcam/obertauern-webcam.jpg",
+            "cam_type": "image"
+        },
+    "13":
+        {
+            "name": "Seekar Talstation",
+            "latitude": "47.26473552079525",
+            "longitude": "13.562627574321607",
+            "image": "SeekarTal.png",
+            "website": "https://www.seekarhaus.at/de/",
+            "webcam": "https://www.foto-webcam.eu/webcam/obertauern1/?frame=1",
+            "cam_type": "frame"
+        },
+    "14":
+        {
+            "name": "Seekar Bergstation",
+            "latitude": "47.27069833184182",
+            "longitude": "13.547622830588693",
+            "image": "SeekarBerg.png",
+            "website": "https://www.seekarhaus.at/de/",
+            "webcam": "https://www.foto-webcam.eu/webcam/obertauern2/?frame=1",
+            "cam_type": "frame"
+        },
+    "15":
+        {
+            "name": "Hotel Seekarhaus",
+            "latitude": "47.26429939818162",
+            "longitude": "13.56484205573102",
+            "image": "seekarhaus.png",
+            "website": "https://www.seekarhaus.at/de/",
+            "webcam": "https://www.foto-webcam.eu/webcam/obertauern3/?frame=1",
+            "cam_type": "frame"
+        },
+    "16":
+        {
+            "name": "Hundsfeldsee",
+            "latitude": "47.26010632089782",
+            "longitude": "13.564853406758408",
+            "image": "hundsfeldsee.png",
+            "website": "",
+            "webcam": "https://www.foto-webcam.eu/webcam/hundsfeldsee/?frame=1",
+            "cam_type": "frame"
+        },
+    "17":
+        {
+            "name": "Zehnerkar",
+            "latitude": "47.247705",
+            "longitude": "13.559235",
+            "image": "zehnerkar.png",
+            "website": "https://www.zehnerkar.at/",
+            "webcam": "https://www.obertauern-ski.at/zehnerkar.jpg`, `//s1.live-panorama.com/keblivestreaming/streams/zkb.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "18":
+        {
+            "name": "Kirchbuehel",
+            "latitude": "47.249752",
+            "longitude": "13.54937",
+            "image": "kirchbuehel.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/kirchbuehel.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/zhk.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "19":
+        {
+            "name": "Gruenwaldkopf",
+            "latitude": "47.250611",
+            "longitude": "13.545803",
+            "image": "gruenwaldkopf.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/gruenwaldkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gwk.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "20":
+        {
+            "name": "Hochalmkopf",
+            "latitude": "47.261822",
+            "longitude": "13.545545",
+            "image": "Hochalmkopf.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/hochalmkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "21":
+        {
+            "name": "Seekar",
+            "latitude": "47.264019",
+            "longitude": "13.568097",
+            "image": "seekar.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/plattenkar.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/pkr.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "22":
+        {
+            "name": "Gamsleiten",
+            "latitude": "47.24593",
+            "longitude": "13.560242",
+            "image": "gamsleiten.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/gamsleiten.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gml.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "23":
+        {
+            "name": "Schaidberg",
+            "latitude": "47.24246",
+            "longitude": "13.574952",
+            "image": "schaidberg.png",
+            "website": "",
+            "webcam": "https://www.obertauern-ski.at/schaidberg.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/sbg.m3u8",
+            "cam_type": "m3u8_player"
+        },
+    "":
+        {
+            "name": "",
+            "latitude": "",
+            "longitude": "",
+            "image": "",
+            "website": "",
+            "webcam": "",
+            "cam_type": ""
         }
+    
 
 }
