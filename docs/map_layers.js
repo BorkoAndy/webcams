@@ -19,7 +19,7 @@
 	attribution: ''
     });
 
-    // Stadia_AlidadeSatellite 
+    // Stadia_AlidadeSatellite - 
     var StadiaSat = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
 	minZoom: 0,
 	maxZoom: 20,
