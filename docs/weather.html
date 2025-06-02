@@ -88,7 +88,7 @@
     </style>
 </head>
 <body>
-        Bellevue Coords
+        <div id="name"></div>
 		<a href="index.html">Back</a>
 	<div style="float:right;  display: flex; gap: 20px;">
 		<!-- These two div are for now-weather -->		 
@@ -778,10 +778,12 @@ const weekDays = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Fr
 	}
 }
 
-// 47.650964010194805, 12.321436283690051 Bellevue-walchsee
 
-const latitude = 47.650964010194805;
-const longitude = 12.321436283690051;
+//URL parsing
+let url = new URLSearchParams(document.location.search)
+const latitude = url.get("lat");
+const longitude = url.get("lon");
+document.getElementById("name").innerHTML = url.get("name");
 
 const days = ["today", "today+1", "today+2", "today+3"]
  //indexes = 7, 14, 20  +24

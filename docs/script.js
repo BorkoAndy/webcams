@@ -120,7 +120,7 @@ var pop_up_info = []
         							let weather_font = '<i class="wi '+ weather_info[data.current.weather_code][is_day].font+'"></i>'
 									
 									L.marker([lat, lon]).addTo(map)
-										.bindPopup(`${title} ${weather_font} ${temperature}
+										.bindPopup(`<div class="pop_up_header">${title} <div class="weather_now"><a href="#" onclick="open_forecast(${lat},${lon},${title})"${weather_font} ${temperature}</a></div></div>
 											<img src="files/img/${image}"><a href="${website}" target="_blank">Website</a> <a href="#" onclick="${cam_type}('${webcam}')"  target="_blank">Webcam</a>`) //add function to run webcams due to cam_type
 										.on('mouseover', function (e) {this.openPopup();})
 								})    							
@@ -128,50 +128,56 @@ var pop_up_info = []
         		})		
 		})	
 
-
 	
 
 
-function get_weather_data(lat, lon) {
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
-    .then(result => result.json())
-    .then(data =>{
-        weather_data = data;
-        console.log(data.current.is_day);
-        set_now(data.current);
-    })
-}
+// function get_weather_data(lat, lon) {
+//     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
+//     .then(result => result.json())
+//     .then(data =>{
+//         weather_data = data;
+//         console.log(data.current.is_day);
+//         set_now(data.current);
+//     })
+// }
 
-function set_now(current){ 
-	is_day = (current.is_day == 1) ? "day" : "night";	
-	let elem = document.getElementById("weather-font-icon");
+// function set_now(current){ 
+// 	is_day = (current.is_day == 1) ? "day" : "night";	
+// 	let elem = document.getElementById("weather-font-icon");
 	
-	elem.innerHTML = '<i class="wi '+code_font[current.weather_code][is_day].class+'"></i>'
-    document.getElementById("now_temperature").innerHTML = Math.round(current.temperature_2m) + " °C";
-}
+// 	elem.innerHTML = '<i class="wi '+code_font[current.weather_code][is_day].class+'"></i>'
+//     document.getElementById("now_temperature").innerHTML = Math.round(current.temperature_2m) + " °C";
+// }
 
-function openWeather(lat, lon) {
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
-        .then(result => result.json())
-        .then(data =>{
-        weather_data = data;
-        console.log(data.current.is_day);        
-    })
-      const code = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Weather</title>                     
-        </head>
-        <body>
+function open_forecast(lat, lon, title) {
+
+	window.open(`weather.html?lat=${lat}&lon=${lon}&name=${title}`);
+
+
+
+
+	//Not almost clear what is the nexxt code for
+    // fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,is_day,weather_code,cloud_cover&hourly=temperature_2m,weather_code&daily=weather_code&timezone=Europe%2FBerlin`)
+    //     .then(result => result.json())
+    //     .then(data =>{
+    //     weather_data = data;
+    //     console.log(data.current.is_day);        
+    // })
+    //   const code = `
+    //     <!DOCTYPE html>
+    //     <html>
+    //     <head>
+    //       <title>Weather</title>                     
+    //     </head>
+    //     <body>
          
-        </body>
-        </html>
-      `;
+    //     </body>
+    //     </html>
+    //   `;
 
-      const win = window.open("", "_blank", "width=1400,height=800");
-      win.document.open();
-      win.document.write(code);
-      win.document.close();
+    //   const win = window.open("", "_blank", "width=1400,height=800");
+    //   win.document.open();
+    //   win.document.write(code);
+    //   win.document.close();
     }
 //EndOf Weather Module
