@@ -39,8 +39,7 @@
         `);
       };
     }
-    function frame(frame_src) {
-        // event.preventDefault();
+    function frame(frame_src) {        
         const width = 500;
         const height = 400;
         const screenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
@@ -120,17 +119,14 @@ var pop_up_info = []
 									let temperature = Math.round(data.current.temperature_2m) + "°C";									       							     						
         							let weather_font = '<i class="wi '+ weather_info[data.current.weather_code][is_day].font+'"></i>'
 									
-    							
-
-
-						L.marker([lat, lon]).addTo(map)
-							.bindPopup(`${title} ${weather_font} ${temperature}
-								<img src="files/img/${image}"><a href="${website}" target="_blank">Website</a> <a href="#" onclick="${cam_type}('${webcam}')"  target="_blank">Webcam</a>`) //add function to run webcams due to cam_type
-							.on('mouseover', function (e) {this.openPopup();})})
+									L.marker([lat, lon]).addTo(map)
+										.bindPopup(`${title} ${weather_font} ${temperature}
+											<img src="files/img/${image}"><a href="${website}" target="_blank">Website</a> <a href="#" onclick="${cam_type}('${webcam}')"  target="_blank">Webcam</a>`) //add function to run webcams due to cam_type
+										.on('mouseover', function (e) {this.openPopup();})
+								})    							
 					}					
         		})		
-		})				
-	
+		})	
 
 
 	
