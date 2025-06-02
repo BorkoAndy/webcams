@@ -13,7 +13,7 @@
 	attribution: ''
     });
 
-    //
+    //OpenTopo
     var OpenMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	maxZoom: 17,
 	attribution: ''
@@ -30,7 +30,13 @@
     // var Esri_WorldImagery
     var Esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	attribution: ''
-    });   
+    });
+    
+    
+    //TO ADD
+   
+
+
 
 
 
