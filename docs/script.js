@@ -102,7 +102,8 @@ var pop_up_info = []
 				.then(result =>result.json())
 				.then(data=>{
 					weather_info = data;
-					for(let i=0; i<pop_up_info.length-1; i++){
+					for(let i=0; i<pop_up_info.length-1; i++)
+          {
 						
 						let lat = pop_up_info[i][1].latitude;
 						let lon = pop_up_info[i][1].longitude;
@@ -120,7 +121,7 @@ var pop_up_info = []
         							let weather_font = '<i class="wi '+ weather_info[data.current.weather_code][is_day].font+'"></i>'
 									
 									L.marker([lat, lon]).addTo(map)
-										.bindPopup(`<div class="pop_up_header">${title} <div class="weather_now"><a href="#" onclick="open_forecast(${lat},${lon},${title})"${weather_font} ${temperature}</a></div></div>
+										.bindPopup(`<div class="pop_up_header">${title} <div class="weather_now"><a href="#" onclick="open_forecast('${lat}','${lon}','${title}')"${weather_font} ${temperature}</a></div></div>
 											<img src="files/img/${image}"><a href="${website}" target="_blank">Website</a> <a href="#" onclick="${cam_type}('${webcam}')"  target="_blank">Webcam</a>`) //add function to run webcams due to cam_type
 										.on('mouseover', function (e) {this.openPopup();})
 								})    							
@@ -151,7 +152,16 @@ var pop_up_info = []
 
 function open_forecast(lat, lon, title) {
 
-	window.open(`weather.html?lat=${lat}&lon=${lon}&name=${title}`);
+	window.open(`weather.html?lat=${lat}&lon=${lon}&name=${title}`,  "_blank", 
+                                    `toolbar=no,                                    
+                                    status=no,
+                                    menubar=no,
+                                    scrollbars=yes,
+                                    resizable=no,
+                                    width=800,
+                                    height=400,
+                                    top=200,
+                                    left=150`);
 
 
 

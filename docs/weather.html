@@ -785,6 +785,7 @@ const latitude = url.get("lat");
 const longitude = url.get("lon");
 document.getElementById("name").innerHTML = url.get("name");
 
+
 const days = ["today", "today+1", "today+2", "today+3"]
  //indexes = 7, 14, 20  +24
 const daytimes = {
@@ -806,11 +807,8 @@ function get_weather_data() {
 
         for (let day of days){
             newdate = new Date(weather_data.daily.time[days.indexOf(day)]);
-			// let s_description = document.getElementById(`wt-s-${day}`).getElementsByClassName("s-description");
             let description = document.getElementById(`wt-${day}`).getElementsByClassName("description");
-            description[0].innerHTML += format_date(weather_data.daily.time[days.indexOf(day)]) + " " + weekDays[newdate.getDay()]
-			// s_description[0].innerHTML += format_date(weather_data.daily.time[days.indexOf(day)]) + " " + weekDays[newdate.getDay()]
-            
+            description[0].innerHTML += format_date(weather_data.daily.time[days.indexOf(day)]) + " " + weekDays[newdate.getDay()]            
                 set_forecast(day, data.hourly)                       
         }
     })
