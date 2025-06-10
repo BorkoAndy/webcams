@@ -8,6 +8,13 @@
         <body>
             
             
+            <video id="camvideo" 
+                      onclick="play_webcam_video('camvideo_1')" 
+                      poster='' 
+                      src=''
+                      type="application/x-mpegURL" muted="muted" controls role="application"
+                      style="width:600px;">
+              </video>
             
             <script>
                 let url = new URLSearchParams(document.location.search)
@@ -20,13 +27,6 @@
                 video_element.setAttribute('src', videosrc);
                 
                 </script>
-<video id="camvideo" 
-          onclick="play_webcam_video('camvideo_1')" 
-          poster='' 
-          src=''
-          type="application/x-mpegURL" muted="muted" controls role="application"
-          style="width:600px;">
-  </video>
 
         </body>
         </html>

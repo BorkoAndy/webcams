@@ -176,7 +176,7 @@
             "longitude": "13.559235",
             "image": "zehnerkar.png",
             "website": "https://www.zehnerkar.at/",
-            "webcam": "https://www.obertauern-ski.at/zehnerkar.jpg`, `//s1.live-panorama.com/keblivestreaming/streams/zkb.m3u8",
+            "webcam": "https://www.obertauern-ski.at/zehnerkar.jpg, //s1.live-panorama.com/keblivestreaming/streams/zkb.m3u8",
             "cam_type": "m3u8_player"
         },
     "18":
@@ -186,7 +186,7 @@
             "longitude": "13.54937",
             "image": "kirchbuehel.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/kirchbuehel.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/zhk.m3u8",
+            "webcam": "https://www.obertauern-ski.at/kirchbuehel.jpg,//s1.live-panorama.com/keblivestreaming/streams/zhk.m3u8",
             "cam_type": "m3u8_player"
         },
     "19":
@@ -196,7 +196,7 @@
             "longitude": "13.545803",
             "image": "gruenwaldkopf.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/gruenwaldkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gwk.m3u8",
+            "webcam": "https://www.obertauern-ski.at/gruenwaldkopf.jpg,//s1.live-panorama.com/keblivestreaming/streams/gwk.m3u8",
             "cam_type": "m3u8_player"
         },
     "20":
@@ -206,7 +206,7 @@
             "longitude": "13.545545",
             "image": "Hochalmkopf.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/hochalmkopf.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8",
+            "webcam": "https://www.obertauern-ski.at/hochalmkopf.jpg,//s1.live-panorama.com/keblivestreaming/streams/hak.m3u8",
             "cam_type": "m3u8_player"
         },
     "21":
@@ -216,7 +216,7 @@
             "longitude": "13.568097",
             "image": "seekar.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/plattenkar.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/pkr.m3u8",
+            "webcam": "https://www.obertauern-ski.at/plattenkar.jpg,//s1.live-panorama.com/keblivestreaming/streams/pkr.m3u8",
             "cam_type": "m3u8_player"
         },
     "22":
@@ -226,7 +226,7 @@
             "longitude": "13.560242",
             "image": "gamsleiten.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/gamsleiten.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/gml.m3u8",
+            "webcam": "https://www.obertauern-ski.at/gamsleiten.jpg,//s1.live-panorama.com/keblivestreaming/streams/gml.m3u8",
             "cam_type": "m3u8_player"
         },
     "23":
@@ -236,7 +236,7 @@
             "longitude": "13.574952",
             "image": "schaidberg.png",
             "website": "",
-            "webcam": "https://www.obertauern-ski.at/schaidberg.jpg`,`//s1.live-panorama.com/keblivestreaming/streams/sbg.m3u8",
+            "webcam": "https://www.obertauern-ski.at/schaidberg.jpg,//s1.live-panorama.com/keblivestreaming/streams/sbg.m3u8",
             "cam_type": "m3u8_player"
         },
     "":

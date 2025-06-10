@@ -61,9 +61,9 @@
         `);
       };
       
-     function m3u8_player(poster, source) {
-      let title = "hi!";
-      open_m3u8(poster, source, title)
+     function m3u8_player(data) { 
+      var new_data = data.split(',');
+     
       const code = `
         <!DOCTYPE html>
         <html>
@@ -75,8 +75,8 @@
         <body>
           <video id="camvideo_1" 
                     onclick="play_webcam_video('camvideo_1')" 
-                    poster=${poster} 
-                    src=${source} 
+                    poster=${new_data[0]} 
+                    src=${new_data[1]} 
                     type="application/x-mpegURL" muted="muted" controls role="application"
                     style="width:600px;">
                 </video>
@@ -84,10 +84,10 @@
         </html>
       `;
 
-      // const win = window.open("", "_blank", "width=610,height=400");
-      // win.document.open();
-      // win.document.write(code);
-      // win.document.close();
+      const win = window.open("", "_blank", "width=610,height=400");
+      win.document.open();
+      win.document.write(code);
+      win.document.close();
     }
 
 	function panomax (panomax_src) {
@@ -126,6 +126,7 @@ var pop_up_info = []
 										.bindPopup(`<div class="pop_up_header">${title} <div class="weather_now"><a href="#" onclick="open_forecast('${lat}','${lon}','${title}')"${weather_font} ${temperature}</a></div></div>
 											<img src="files/img/${image}"><a href="${website}" target="_blank">Website</a> <a href="#" onclick="${cam_type}('${webcam}')"  target="_blank">Webcam</a>`) //add function to run webcams due to cam_type
 										.on('mouseover', function (e) {this.openPopup();})
+                  // console.log(web)
 								})    							
 					}					
         		})		
@@ -193,19 +194,5 @@ function open_forecast(lat, lon, title) {
     //   win.document.close();
     }
 
-
 //EndOf Weather Module
 
-function open_m3u8(poster, source, title){
-
-  window.open(`m3u8_player.html?poster=${poster}&videosrc=${source}&name=${title}`,  "_blank", 
-    `toolbar=no,                                    
-    status=no,
-    menubar=no,
-    scrollbars=yes,
-    resizable=no,
-    width=800,
-    height=400,
-    top=200,
-    left=150`);
-}
