@@ -62,6 +62,8 @@
       };
       
      function m3u8_player(poster, source) {
+      let title = "hi!";
+      open_m3u8(poster, source, title)
       const code = `
         <!DOCTYPE html>
         <html>
@@ -82,10 +84,10 @@
         </html>
       `;
 
-      const win = window.open("", "_blank", "width=610,height=400");
-      win.document.open();
-      win.document.write(code);
-      win.document.close();
+      // const win = window.open("", "_blank", "width=610,height=400");
+      // win.document.open();
+      // win.document.write(code);
+      // win.document.close();
     }
 
 	function panomax (panomax_src) {
@@ -190,4 +192,20 @@ function open_forecast(lat, lon, title) {
     //   win.document.write(code);
     //   win.document.close();
     }
+
+
 //EndOf Weather Module
+
+function open_m3u8(poster, source, title){
+
+  window.open(`m3u8_player.html?poster=${poster}&videosrc=${source}&name=${title}`,  "_blank", 
+    `toolbar=no,                                    
+    status=no,
+    menubar=no,
+    scrollbars=yes,
+    resizable=no,
+    width=800,
+    height=400,
+    top=200,
+    left=150`);
+}
