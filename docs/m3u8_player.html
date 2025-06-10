@@ -6,27 +6,27 @@
             <script src="files/js/webcams_player.js"></script>         
         </head>
         <body>
-          <video id="camvideo" 
-                    onclick="play_webcam_video('camvideo_1')" 
-                    poster='' 
-                    src=''
-                    type="application/x-mpegURL" muted="muted" controls role="application"
-                    style="width:600px;">
-            </video>
-
-
-
+            
+            
+            
             <script>
                 let url = new URLSearchParams(document.location.search)
                 const poster = url.get("poster");
                 const videosrc = url.get("videosrc");
                 const title = url.get("name");
-                document.getElementById("name").innerHTML = url.get("name");
+                // document.getElementById("name").innerHTML = url.get("name");
                 var video_element = document.getElementById('camvideo');
                 video_element.setAttribute('poster', poster);
                 video_element.setAttribute('src', videosrc);
-
-            </script>
+                
+                </script>
+<video id="camvideo" 
+          onclick="play_webcam_video('camvideo_1')" 
+          poster='' 
+          src=''
+          type="application/x-mpegURL" muted="muted" controls role="application"
+          style="width:600px;">
+  </video>
 
         </body>
         </html>
