@@ -97,5 +97,33 @@ ul{
     height: auto;
 }
 
+#random_cam{
+    background-color: rgba(59, 76, 32, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    position: absolute;
+    top: 65vh;
+    right: 8vw;
+}
+#random_cam h3,
+#random_cam p{
+    margin: 7px;
+    color: #ffffff;
+}
+#random_cam p{
+    font-size: 0.7rem;
+}
+#random_cam img{
+    width: 28px;
+    height: auto;
+    margin-bottom: -10px;
+}
+#random_cam button{
+    padding: 5px 20px;
+    background-color: #74af81;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+}
 
 
