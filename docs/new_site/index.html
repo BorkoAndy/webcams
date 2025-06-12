@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alpine Adventure</title>
     <link rel="stylesheet" href="../files\css\new_site_styles.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
     <div id="header">
@@ -46,7 +49,7 @@
             </div>
             <div class="buttons">
                 <button>Watch Live Cam</button>
-                <a href="#" title="Location"><img src="../files\img\live-location.png" alt=""></a>
+                <a href="#" title="Location"><img src="../files\img\live-location.png" alt="" class="location-icon"></a>
             </div>
         </div>
     </div>
@@ -61,19 +64,19 @@
             <!-- Sliding list -->
             <ul>
                 <li>
-                    <a href=""><img src="" alt="">Photo</a>
-                    <a href=""><img src="" alt="">Title+map_link</a>
-                    <p>Height+description</p>
+                    <a href=""><img src="../files\img\hundsfeldsee.png" alt=""></a><br/>
+                    <a href=""><img src="../files\img\live-location.png" alt="" class="location-icon">Hundsfeldsee</a>
+                    <p>1,787m Obertauern</p>
                 </li>
                 <li>
-                    <a href=""><img src="" alt="">Photo</a>
-                    <a href=""><img src="" alt="">Title+map_link</a>
-                    <p>Height+description</p>
+                    <a href=""><img src="../files\img\cinderella.jpg" alt=""></a><br/>
+                    <a href=""><img src="../files\img\live-location.png" alt="" class="location-icon">Hotel Cinderella</a>
+                    <p>1,732m Obertauern</p>
                 </li>
                 <li>
-                    <a href=""><img src="" alt="">Photo</a>
-                    <a href=""><img src="" alt="">Title+map_link</a>
-                    <p>Height+description</p>
+                    <a href=""><img src="../files\img\Almschloessl.png" alt=""></a><br/>
+                    <a href=""><img src="../files\img\live-location.png" alt="" class="location-icon">Hotel Almschloessl</a>
+                    <p>1,688m Obertauern</p>
                 </li>
             </ul>
             
@@ -84,15 +87,32 @@
             <div id="leaflet-maps"></div>
         </div>
         <div id="content-weather">
-            <h2>Now + icons</h2>
-            <a href="#">See forecast ></a>
+            <div class="header">
+                <h2>Obertauern now</h2>
+                <a href="#">See forecast ></a>
+            </div>
         </div>
         <div id="content-blog">
-            <h2>Blog preview</h2>
-            <p>See all ></p>
+            <div class="header">
+                <h2>Blog preview</h2>
+                <a href="#">See all ></a>
+            </div>
         </div>
 
     </div>
 
+    <div id="footer">
+        <div class="left"><a href="mailto:andrej@nc-werbung.at">andrej@nc-werbung.at</a></div>
+        <div class="right">&copyNC-Werbung 2025</div>
+    </div>
+
+
+    <script>
+        var map = L.map('leaflet-maps').setView([47.248747498607024, 13.557168259939111], 15); 
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: ''
+        }).addTo(map);
+        L.marker([47.248747498607024, 13.557168259939111]).addTo(map)
+    </script>
 </body>
 </html>

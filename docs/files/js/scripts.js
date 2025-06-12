@@ -25,3 +25,10 @@ function delete_banners(){
 function scrolltodiv(div_id){
     document.getElementById(div_id).scrollIntoView({ behavior: "smooth", block: "start"});
 }
+
+
+var map = L.map('leaflet-maps').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: ''
+}).addTo(map);
